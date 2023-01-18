@@ -1,0 +1,49 @@
+package kz.aitu.oop.practice.practice2;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Adult grandmother = new Adult("Gloria", "Melman", 23,2500,73,"Kasha");
+        Children child = new Children("Alex", "Marti", 27, 2500, 7, "Ice-cream");
+        Disable_Passenger disable_passenger = new Disable_Passenger("Julian", "Mortis", 54, 2500, 23, "Pyure");
+
+        System.out.println("-------------------------");
+        System.out.println("1. List of Coupe");
+        System.out.println("2. List of Restaurant");
+        System.out.println("3. List of Luxury");
+        System.out.println("0. Exit");
+        System.out.println("-------------------------");
+
+        int choice = scanner.nextInt();
+        while (choice != 0) {
+             if (choice == 1) {
+                Train coupe = new Coupe(1);
+                coupe.displayInfo();
+                coupe.displayPassengerList();
+            } else if (choice == 2) {
+                Train restaurant = new Restaurant(2);
+                restaurant.displayInfo();
+                restaurant.displayPassengerList();
+            } else if (choice == 3) {
+                Train luxury= new Luxury(3);
+                luxury.displayInfo();
+                luxury.displayPassengerList();
+            } else {
+                System.out.println("Se you soon");
+            }
+            System.out.println("-------------------------");
+            System.out.println("1. List of Coupe");
+            System.out.println("2. List of Restaurant");
+            System.out.println("3. List of Luxury");
+            System.out.println("0. Exit");
+            System.out.println("-------------------------");
+            choice = scanner.nextInt();
+        }
+        scanner.close();
+
+
+    }
+
+}
