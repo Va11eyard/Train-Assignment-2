@@ -1,0 +1,28 @@
+package kz.aitu.oop.practice.practice2;
+
+abstract class Train {
+    public String departureTime;
+    public int numPassengers;
+    public int numWagons;
+    public String direction;
+    public int speed;
+    public String kmH;
+    public int numChildren;
+    public int numAdults;
+    public int numDisabled;
+
+    public Train(String departureTime, int numPassengers, int numWagons, String direction, int speed, String kmH, int numChildren, int numDisabled, int numAdults) {
+        this.departureTime = departureTime;
+        this.numPassengers = numPassengers;
+        this.numWagons = numWagons;
+        this.direction = direction;
+        this.speed = speed;
+        this.kmH = kmH;
+        this.numChildren = numChildren;
+        this.numDisabled = numDisabled;
+        this.numAdults = numAdults;
+    }
+
+    public abstract void displayInfo();
+    public abstract void displayPassengerList();
+}
